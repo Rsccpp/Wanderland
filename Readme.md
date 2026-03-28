@@ -130,7 +130,7 @@ SECRET=session_secret
 Clone the repository:
 
 ```
-git clone https://github.com/your-username/airbnb-clone.git
+git clone https://github.com/Rsccpp/Wanderland.git
 ```
 
 Navigate to project folder:
@@ -148,7 +148,7 @@ npm install
 Run the server:
 
 ```
-npm start
+npm index.js
 ```
 
 Open browser:
@@ -165,13 +165,6 @@ http://localhost:3000
 * Only listing owner can edit/delete
 * Only logged-in users can add reviews
 * Reviews linked to user accounts
-
----
-
-## 📸 Screenshots
-
-
-!(https://via.placeholder.com/900x400)
 
 ---
 
