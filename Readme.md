@@ -5,13 +5,6 @@ Users can sign up, log in, add their own property listings, and review other lis
 
 ---
 
-## 🚀 Live Demo
-
-🌐 Website: **[Your Website Link Here]**
-(Replace with your deployed URL)
-
----
-
 ## 📸 Project Preview
 
 ![Project Screenshot](preview.png)
