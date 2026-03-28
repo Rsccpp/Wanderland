@@ -1,0 +1,112 @@
+<% layout('/layouts/boilerplate') %>
+
+   <style>
+     .filters {
+       display: flex;
+       flex-wrap: wrap;
+     }
+     
+     #filter {
+        text-align: center;
+        margin-right: 1rem;
+        margin-top: 1rem;
+        cursor: pointer;
+        opacity: 0.8;
+     }
+
+     #filter:hover {
+       opacity: 1.5;
+     }
+
+     #filter p {
+       font-size: small;
+     }
+   </style>
+  <body>
+
+    <div class="filters">
+      <div id="filter">
+        <div><i class="fa-solid fa-fire"></i></div>
+        <p>Trending</p>
+      </div>
+      <div id="filter">
+        <div><i class="fa-solid fa-bed"></i></div>
+        <p>Rooms</p>
+      </div>
+      <div id="filter">
+        <div><i class="fa-solid fa-mountain-city"></i></div>
+        <p>Iconic Cities</p>
+      </div>
+      <div id="filter">
+        <div><i class="fa-solid fa-mountain"></i></div>
+        <p>Mountains</p>
+      </div>
+      <div id="filter">
+        <div><i class="fa-regular fa-chess-rook"></i></div>
+        <p>Castles</p>
+      </div>
+      <div id="filter">
+        <div><i class="fa-solid fa-person-swimming"></i></div>
+        <p>Amazing Pools</p>
+      </div>
+      <div id="filter">
+        <div><i class="fa-solid fa-fire-burner"></i></div>
+        <p>Camping</p>
+      </div>
+      <div id="filter">
+        <div><i class="fa-solid fa-cow"></i></div>
+        <p>Farms</p>
+      </div>
+      <div id="filter">
+        <div><i class="fa-solid fa-star-of-life"></i></div>
+        <p>Artic</p>
+      </div>
+    </div>
+
+    <!-- <div class="search">
+      <div class="destinations">
+        <p>Where</p>
+        <h4>Search destinations</h4>
+      </div>
+    </div> -->
+
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mt-3">
+
+      <% for(let list of listings) { %>
+
+        <div class="col">
+
+          <a href="/listings/<%= list._id %>" class="text-decoration-none">
+            <div class="card listing-card h-100">
+              <img src="<%= list.image.url %>" class="card-img-top" style="height: 18rem; object-fit: cover;">
+
+              <div class="card-img-overlay">
+                <div class="over-details">
+                  <div class="over-guests">
+                    <p>Guest favourite</p>
+                  </div>
+                  <i class="fa-solid fa-heart"></i>
+                </div>
+              </div>
+
+              <div class="card-details">
+                <b>
+                  <%= list.title %>
+                </b>
+                <p>
+                  &#8377;<%= list.price ? list.price.toLocaleString('en-IN') : "N/A" %>
+                    for <%= Math.floor(Math.random() * (3 - 1) + 1) %> nights
+                      &nbsp;&nbsp;&nbsp;&nbsp;
+                      <span style="color: gold;">&#9733;</span> &nbsp;<%= (Math.random() * (5 - 4) + 4).toFixed(2) %>
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <% }%>
+
+
+
+    </div>
+
+  </body>

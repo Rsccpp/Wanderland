@@ -1,0 +1,25 @@
+<% if (successMsg && successMsg.length) { %>
+    <br>
+    <div class="alert alert-success alert-dismissible fade show col-6 offset-3" id="flash-msg" role="alert">
+        <%= successMsg %>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <% } %>
+
+<% if (errorMsg && errorMsg.length) { %>
+    <br>
+    <div class="alert alert-danger alert-dismissible fade show col-6 offset-3" id="flash-msg" role="alert">
+        <%= errorMsg %>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <% } %>
+
+<script>
+  setTimeout(() => {
+    const flash = document.getElementById("flash-msg");
+    if(flash){
+      flash.style.opacity = "0";
+      setTimeout(() => flash.remove(), 300);
+    }
+  }, 3000)
+</script>
