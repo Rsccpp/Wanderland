@@ -5,13 +5,6 @@ Users can sign up, log in, add their own property listings, and review other lis
 
 ---
 
-## 🚀 Live Demo
-
-🌐 Website: **[Your Website Link Here]**
-(Replace with your deployed URL)
-
----
-
 ## 📸 Project Preview
 
 ![Project Screenshot](preview.png)
@@ -79,20 +72,20 @@ Wanderland/
 │   └── user.js
 │
 ├── views/
-    ├── includes
-        └── flash.ejs
-        └── footer.ejs
-        └── navbar.ejs
-    ├── layouts
-        ├── boilerplate.ejs 
-│   ├──  listings/
-        ├── edit.ejs
-        ├── index.ejs
-        ├── new.ejs
-        ├── show.ejs
+│    ├── includes
+│       └── flash.ejs
+│       └── footer.ejs
+│       └── navbar.ejs
+│    ├── layouts
+│        ├── boilerplate.ejs 
+│   ├── listings/
+│        ├── edit.ejs
+│       ├── index.ejs
+│       ├── new.ejs
+│       ├── show.ejs
 │   ├── users/
-        └── login.ejs
-        └── signpup.ejs
+│        └── login.ejs
+│       └── signpup.ejs
 │   ├── error.ejs
 │
 ├── public/
@@ -100,8 +93,8 @@ Wanderland/
 │   ├── js/
 │
 ├── utils/
-    └── ExpressError.js
-    └── wrapAsync.js
+│   └── ExpressError.js
+│   └── wrapAsync.js
 ├── middleware.js
 ├── index.js
 ├── package.json
@@ -130,7 +123,7 @@ SECRET=session_secret
 Clone the repository:
 
 ```
-git clone https://github.com/your-username/airbnb-clone.git
+git clone https://github.com/Rsccpp/Wanderland.git
 ```
 
 Navigate to project folder:
@@ -148,7 +141,7 @@ npm install
 Run the server:
 
 ```
-npm start
+node index.js
 ```
 
 Open browser:
@@ -165,13 +158,6 @@ http://localhost:3000
 * Only listing owner can edit/delete
 * Only logged-in users can add reviews
 * Reviews linked to user accounts
-
----
-
-## 📸 Screenshots
-
-
-!(https://via.placeholder.com/900x400)
 
 ---
 
