@@ -79,20 +79,20 @@ Wanderland/
 │   └── user.js
 │
 ├── views/
-    ├── includes
-        └── flash.ejs
-        └── footer.ejs
-        └── navbar.ejs
-    ├── layouts
-        ├── boilerplate.ejs 
-│   ├──  listings/
-        ├── edit.ejs
-        ├── index.ejs
-        ├── new.ejs
-        ├── show.ejs
+│    ├── includes
+│       └── flash.ejs
+│       └── footer.ejs
+│       └── navbar.ejs
+│    ├── layouts
+│        ├── boilerplate.ejs 
+│   ├── listings/
+│        ├── edit.ejs
+│       ├── index.ejs
+│       ├── new.ejs
+│       ├── show.ejs
 │   ├── users/
-        └── login.ejs
-        └── signpup.ejs
+│        └── login.ejs
+│       └── signpup.ejs
 │   ├── error.ejs
 │
 ├── public/
@@ -100,8 +100,8 @@ Wanderland/
 │   ├── js/
 │
 ├── utils/
-    └── ExpressError.js
-    └── wrapAsync.js
+│   └── ExpressError.js
+│   └── wrapAsync.js
 ├── middleware.js
 ├── index.js
 ├── package.json
@@ -148,7 +148,7 @@ npm install
 Run the server:
 
 ```
-npm index.js
+node index.js
 ```
 
 Open browser:
