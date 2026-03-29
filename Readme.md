@@ -9,8 +9,6 @@ Users can sign up, log in, add their own property listings, and review other lis
 
 ![Project Screenshot](preview.png)
 
-<!-- Replace with your actual screenshot -->
-
 ---
 
 ## ✨ Features
