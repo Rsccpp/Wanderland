@@ -113,7 +113,6 @@ MONGO_URI=your_mongodb_atlas_url
 CLOUD_NAME=your_cloudinary_name
 CLOUD_API_KEY=your_cloudinary_key
 CLOUD_API_SECRET=your_cloudinary_secret
-SECRET=session_secret
 ```
 
 ---
