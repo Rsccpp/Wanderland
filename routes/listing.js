@@ -21,7 +21,6 @@ router
 // Category Route
 router.get("/category", wrapAsync(listingController.filterByCategory));
   
-
 // Add Route
 router.get("/new", isLoggedIn, listingController.renderNewForm);
 
