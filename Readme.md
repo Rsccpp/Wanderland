@@ -3,6 +3,8 @@
 A full-stack **Airbnb Clone** web application built using **Node.js**, **Express**, **MongoDB Atlas**, and **Cloudinary**.
 Users can sign up, log in, add their own property listings, and review other listings. Only the listing owner has permission to edit or delete their listings.
 
+🌐 **Live Demo**: [Click here to try it out!](https://wanderland-9n7t.onrender.com/)
+
 ---
 
 ## 📸 Project Preview
@@ -111,7 +113,6 @@ MONGO_URI=your_mongodb_atlas_url
 CLOUD_NAME=your_cloudinary_name
 CLOUD_API_KEY=your_cloudinary_key
 CLOUD_API_SECRET=your_cloudinary_secret
-SECRET=session_secret
 ```
 
 ---
