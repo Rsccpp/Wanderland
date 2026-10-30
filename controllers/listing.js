@@ -32,6 +32,19 @@ module.exports.showListings = async (req, res) => {
   res.render("listings/show.ejs", { listDetail });
 };
 
+module.exports.filterByCategory = async(req, res) => {
+  let {category} = req.query;
+  let filter = {};
+  if(category) {
+    filter.category = category;
+  }
+  let listings = await listing.find(filter);
+
+  res.render("listings/index.ejs", {
+   listings, category
+  });
+}
+
 module.exports.editListing = async (req, res, next) => {
   const { id } = req.params;
   const listings = await listing.findById(id);

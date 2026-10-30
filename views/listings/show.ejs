@@ -8,8 +8,6 @@
                 <div class="mt-3">
                     <h3><b>
                             <%= listDetail.title %>
-
-
                         </b></h3>
 
                     <div class="card listing-card" style="position: relative; width: 900px;">
@@ -50,9 +48,6 @@
             </div>
         </div>
 
-
-
-
         <div class="row mb-5 btns">
             <% if ( currUser && listDetail.owner && listDetail.owner._id.toString()===currUser._id.toString() ) { %>
                 <div class="col-8 offset-2 d-flex justify-content-center gap-4">
@@ -67,12 +62,11 @@
                 <div class="col-md-6 d-flex justify-content-end">
                 </div>
                 <% } %>
-                
+
         </div>
 
 
         <div class="col-8 offset-2">
-            <hr>
             <% if(currUser) {%>
                 <h4>Leave a Review</h4>
 
@@ -129,8 +123,7 @@
 
                                         <form method="POST"
                                             action="/listings/<%= listDetail._id %>/reviews/<%= review._id %>?_method=DELETE">
-                                            <% if (currUser && review.author.equals(currUser._id) ) {
-                                                %>
+                                            <% if (currUser && review.author.equals(currUser._id) ) { %>
                                                 <button class="btn btn-sm btn-dark">Delete</button>
                                                 <% } %>
                                         </form>

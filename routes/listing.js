@@ -18,6 +18,10 @@ router
     wrapAsync(listingController.createListing),
   );
 
+// Category Route
+router.get("/category", wrapAsync(listingController.filterByCategory));
+  
+
 // Add Route
 router.get("/new", isLoggedIn, listingController.renderNewForm);
 
@@ -33,6 +37,7 @@ router
     wrapAsync(listingController.updateListing),
   )
   .delete(isLoggedIn, isOwner, wrapAsync(listingController.destroyListing));
+
 
 // Edit Route
 router.get("/:id/edit", isLoggedIn, wrapAsync(listingController.editListing));

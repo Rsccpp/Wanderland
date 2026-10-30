@@ -1,83 +1,66 @@
 <% layout('/layouts/boilerplate') %>
 
-   <style>
-     .filters {
-       display: flex;
-       flex-wrap: wrap;
-     }
-     
-     #filter {
-        text-align: center;
-        margin-right: 1rem;
-        margin-top: 1rem;
-        cursor: pointer;
-        opacity: 0.8;
-     }
-
-     #filter:hover {
-       opacity: 1.5;
-     }
-
-     #filter p {
-       font-size: small;
-     }
-   </style>
   <body>
-
     <div class="filters">
       <div id="filter">
-        <div><i class="fa-solid fa-fire"></i></div>
-        <p>Trending</p>
+        <a href="/listings/category?category=Trending">
+          <div><i class="fa-solid fa-fire"></i></div>
+          <p>Trending</p></a> 
+      </div>
+      </form>
+      <div id="filter">
+        <a href="/listings/category?category=Rooms">
+          <div><i class="fa-solid fa-bed"></i></div>
+          <p>Rooms</p></a> 
       </div>
       <div id="filter">
-        <div><i class="fa-solid fa-bed"></i></div>
-        <p>Rooms</p>
+        <a href="/listings/category?category=Iconic cities">
+          <div><i class="fa-solid fa-mountain-city"></i></div>
+          <p>Iconic cities</p></a> 
       </div>
       <div id="filter">
-        <div><i class="fa-solid fa-mountain-city"></i></div>
-        <p>Iconic Cities</p>
+        
+        <a href="/listings/category?category=Mountains">
+          <div><i class="fa-solid fa-mountain"></i></div>
+          <p>Mountains</p></a> 
       </div>
       <div id="filter">
-        <div><i class="fa-solid fa-mountain"></i></div>
-        <p>Mountains</p>
+        
+        <a href="/listings/category?category=Castles">
+          <div><i class="fa-regular fa-chess-rook"></i></div>
+          <p>Castles</p></a> 
       </div>
       <div id="filter">
-        <div><i class="fa-regular fa-chess-rook"></i></div>
-        <p>Castles</p>
+        
+        <a href="/listings/category?category=Camping">
+          <div><i class="fa-solid fa-fire-burner"></i></div>
+          <p>Camping</p></a> 
       </div>
+      
       <div id="filter">
-        <div><i class="fa-solid fa-person-swimming"></i></div>
-        <p>Amazing Pools</p>
-      </div>
-      <div id="filter">
-        <div><i class="fa-solid fa-fire-burner"></i></div>
-        <p>Camping</p>
-      </div>
-      <div id="filter">
-        <div><i class="fa-solid fa-cow"></i></div>
-        <p>Farms</p>
-      </div>
-      <div id="filter">
-        <div><i class="fa-solid fa-star-of-life"></i></div>
-        <p>Artic</p>
+        
+        <a href="/listings/category?category=Artic">
+          <div><i class="fa-solid fa-star-of-life"></i></div>
+          <p>Artic</p></a> 
       </div>
     </div>
 
-    <!-- <div class="search">
-      <div class="destinations">
-        <p>Where</p>
-        <h4>Search destinations</h4>
-      </div>
-    </div> -->
+    <% if(listings.length == 0) { %>
+      <h4>Currently, no listings found in this category.</h4>
+    <%} %>
 
+   
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mt-3">
-
+      
       <% for(let list of listings) { %>
-
+    
+        
         <div class="col">
+          
 
           <a href="/listings/<%= list._id %>" class="text-decoration-none">
             <div class="card listing-card h-100">
+
               <img src="<%= list.image.url %>" class="card-img-top" style="height: 18rem; object-fit: cover;">
 
               <div class="card-img-overlay">

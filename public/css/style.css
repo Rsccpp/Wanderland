@@ -45,6 +45,34 @@ body {
   height: 200px;
 }
 
+/* Category */
+
+.filters {
+display: flex;
+flex-wrap: wrap;
+}
+
+.filters a {
+    text-decoration: none;
+    color: black;
+}
+
+#filter {
+text-align: center;
+margin-right: 1rem;
+margin-top: 1rem;
+cursor: pointer;
+opacity: 0.8;
+}
+
+#filter:hover {
+opacity: 1.5;
+}
+
+#filter p {
+font-size: small;
+}
+
 /* footer */
 footer {
   font-family: Arial, sans-serif;
